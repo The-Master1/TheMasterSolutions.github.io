@@ -170,7 +170,8 @@
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <form action="mailto:alleyzthemaster@gmail.com" method="post" enctype="text/plain">
+    <!-- Secure Formspree integration -->
+    <form action="https://formspree.io/f/xpqjydob" method="POST">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
 
@@ -180,12 +181,15 @@
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="5" required></textarea>
 
+      <!-- Redirect to thankyou.html after submission -->
+      <input type="hidden" name="_next" value="https://the-master1.github.io/TheMasterSolutions.github.io/thankyou.html">
+
       <button type="submit">Send</button>
     </form>
   </section>
 
   <footer>
-    <p>Visit us at:https://the-master1.github.io/TheMasterSolutions.github.io/ </p>
+    <p>Visit us at: https://the-master1.github.io/TheMasterSolutions.github.io/</p>
     <div class="qr">
       <h3>Scan to Visit Our Website</h3>
       <canvas id="qrcode"></canvas>
